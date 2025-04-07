@@ -4,9 +4,9 @@ import { MdClose } from "react-icons/md";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { logoLight } from "../../../assets/images";
-import Image from "../../designLayouts/Image";
+import Image from "../../design_layouts/image";
 import { navBarList } from "../../../constants";
-import Flex from "../../designLayouts/Flex";
+import Flex from "../../design_layouts/flex";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(true);
@@ -107,13 +107,13 @@ const Header = () => {
                               transition={{ duration: 0.4 }}
                               className="text-sm flex flex-col gap-1 top-2"
                           >
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/VGA')}>VGA</li>
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/Monitor')}>Monitor</li>
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/Laptop')}>Laptop</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/vga')}>VGA</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/monitor')}>Monitor</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/laptop')}>Laptop</li>
                             <li className="headerSedenavLi" onClick={() => navigate('/category/Gaming PC')}>Gaming PC</li>
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/Keyboard')}>Keyboard</li>
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/Mouse')}>Mouse</li>
-                            <li className="headerSedenavLi" onClick={() => navigate('/category/Headset')}>Headset</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/keyboard')}>Keyboard</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/mouse')}>Mouse</li>
+                            <li className="headerSedenavLi" onClick={() => navigate('/category/headset')}>Headset</li>
                             <li className="headerSedenavLi" onClick={() => navigate('/category/Gaming Chair')}>Gaming Chair</li>
                           </motion.ul>
                       )}

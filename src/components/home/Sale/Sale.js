@@ -5,7 +5,7 @@ import {
   saleImgTwo,
   saleImgThree,
 } from "../../../assets/images/index";
-import Image from "../../designLayouts/Image";
+import Image from "../../design_layouts/image";
 
 const Sale = () => {
   return (

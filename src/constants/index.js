@@ -37,7 +37,7 @@ export const navBarList = [
   },
 ];
 // =================== NavBarList End here ======================
-// =================== Special Offer data Start here ============
+// =================== Special offer data Start here ============
 export const SplOfferData = [
   {
     _id: "201",
@@ -76,7 +76,7 @@ export const SplOfferData = [
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
-// =================== Special Offer data End here ==============
+// =================== Special offer data End here ==============
 
 // =================== PaginationItems Start here ===============
 

@@ -6,7 +6,7 @@ import {
   bannerImgTwo,
   bannerImgThree,
 } from "../../assets/images";
-import Image from "../designLayouts/Image";
+import Image from "../design_layouts/image";
 
 const Banner = () => {
   const [dotActive, setDocActive] = useState(0);

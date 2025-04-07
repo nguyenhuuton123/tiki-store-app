@@ -1,44 +1,33 @@
-import { configureStore } from "@reduxjs/toolkit";
-import {
-  persistStore,
-  persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import zgearReducer from "../features/zgearSlice";
-import userReducer from "../features/user/userSlice"
-import productReducer from "../features/product/productSlice";
-import adminReducer from "../features/user/adminSilce"
-import authReducer from "../features/user/authSilce"
-import cartReducer from "../features/product/cartSlice"
+import {configureStore} from "@reduxjs/toolkit";
+import {FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE,} from "redux-persist";
+import storage from 'redux-persist/lib/storage';
+import userReducer from "../features/user/user_slice"
+import productReducer from "../features/product/product_slice";
+import adminReducer from "../features/user/admin_silce"
+import authReducer from "../features/user/auth_silce"
+import cartReducer from "../features/product/cart_slice"
+
 const persistConfig = {
-  key: "root",
-  version: 1,
-  storage,
+    key: 'auth',
+    storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, zgearReducer);
+const persistedReducer = persistReducer(persistConfig, authReducer);
 
 export const store = configureStore({
-  reducer: {
-    zgearReducer: persistedReducer,
-    products: productReducer,
-    user: userReducer,
-    auth: authReducer,
-    admin: adminReducer,
-    cart: cartReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-      }),
+    reducer: {
+        products: productReducer,
+        user: userReducer,
+        auth: persistedReducer,
+        admin: adminReducer,
+        cart: cartReducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }),
 });
 
-export let persistor = persistStore(store);
+export const persistor = persistStore(store);

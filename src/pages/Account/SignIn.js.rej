@@ -1,9 +1,0 @@
-diff a/src/pages/Account/SignIn.js b/src/pages/Account/SignIn.js	(rejected hunks)
-@@ -46,7 +46,6 @@
-       setUsername("");
-       setPassword("");
- 
--      if (user.admin) {
-       if (user.roles) {
-         navigate("/adminnavbar");
-       } else {
